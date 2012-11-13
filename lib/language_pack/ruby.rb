@@ -492,8 +492,9 @@ params = CGI.parse(uri.query || "")
   <%= attribute "database", database %>
   <%= attribute "username", username %>
   <%= attribute "password", password, true %>
-  <%= attribute "host",     host %>
-  <%= attribute "port",     port %>
+  <%= attribute "host", host %>
+  <%= attribute "port", port %>
+  <%= attribute "pool", 15, true %>  
 
 <% params.each do |key, value| %>
   <%= key %>: <%= value.first %>
